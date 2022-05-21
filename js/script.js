@@ -25,6 +25,7 @@ $(document).ready(function(){
         e.preventDefault();
         let name = $("#name")[0].value;
         let tier = $("#tier")[0].value
+        let amount = $("#amount")[0].value
 
         let userName = $("#userName")[0].innerHTML;
         let userTier = $("#userTier")[0];
@@ -34,6 +35,10 @@ $(document).ready(function(){
 
         switch(tier){
             case "1":
+                if(amount != 10000){
+                    alert("Wrong amount!!");
+                    return;
+                }
                 tier1.members.push(name);
                 $("#userName")[0].innerHTML = name;
                 $("#userTier")[0].innerHTML = tier1.name;
@@ -64,6 +69,10 @@ $(document).ready(function(){
                     `)
                 break;
             case "2":
+                if(amount != 20000){
+                    alert("Wrong amount!!");
+                    return;
+                }
                 tier2.members.push(name);
                 $("#userName")[0].innerHTML = name;
                 $("#userTier")[0].innerHTML = tier2.name;
@@ -94,6 +103,10 @@ $(document).ready(function(){
                     `)
                 break;
             case "3":
+                if(amount != 30000){
+                    alert("Wrong amount!!");
+                    return;
+                }
                 tier3.members.push(name);
                 $("#userName")[0].innerHTML = name;
                 $("#userTier")[0].innerHTML = tier3.name;
