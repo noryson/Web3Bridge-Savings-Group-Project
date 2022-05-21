@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Project:      Norstack.com        -->
-<!-- Description:  Landing page        -->
-<!-- Author:       Abassyornor Edem    -->
-<!-- Date:         5th February 2022   -->
-
 <head>
     <meta charset="UTF-8">
-    <title>Norstack Industries</title>
+    <title>Savings Group</title>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,460 +24,69 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </head>
-<body id="stopScrolling">
-    <div class="preloader"></div>
-    <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero__topbar">
-            <div class="hero__logoBar">
-                <img class="hero__logoImage" src="images/logo.png">
-<!--                <span class="hero__logoText">NORSTACK</span>-->
-            </div>
+<body>
+<div class="container">
+    <h1><b>Welcome to the savings group application</b></h1>
+    <p>Please fill in your details</p>
+
+    <div class="bg-dark p-2 d-flex justify-content-center">
+        <form id="form" class="form w-50">
+            <input id="name" name="name" type="text" class="form-control mb-5" placeholder="Input your name" required>
+            <select id="tier" name="tier" class="form-control mb-5" required>
+                <option value="1" class="form-control">Tier 1</option>
+                <option value="2" class="form-control">Tier 2</option>
+                <option value="3" class="form-control">Tier 3</option>
+            </select>
+            <input id="amount" name="amount" class="form-control mb-5" type="number" placeholder="10,000" required>
+            <input type="submit" class="form-control mb-5">
+        </form>
+    </div>
 
 
-            <ul class="hero__nav">
-                <li class="hero__navItem"><a class="" href="">HOME</a></li>
-                <li class="hero__navItem"><a href="#services">SERVICES</a></li>
-                <li class="hero__navItem"><a href="/blog">BLOG</a></li>
-                <li class="hero__navItem"><a href="#portfolio">PORTFOLIO</a></li>
-                <li class="hero__navItem"><a href="/about">ABOUT</a></li>
-                <li class="hero__navItem"><a href="">HOW IT WORKS</a></li>
-                <li class="hero__navItem"><button class="btn">REQUEST SERVICE</button></li>
-            </ul>
-        </div>
+    <br>
+    <br>
+    <br>
+    <h1><b>Members</b></h1>
 
-        <div class="hero__content">
-            <div class="hero__contentBox">
-                <div class="hero__contentHeader">WE ARE NORSTACK.</div>
-                <div class="hero__contentBody">We Craft Stunning <br>Digital Experiences.</div>
-                <button class="hero__contentFooter btn">LEARN MORE</button>
-            </div>
-        </div>
-        <div class="hero__link">
-            <ul class="hero__linkSocial">
-                    <li class="hero__linkSocialItem"><a class="fab fa-facebook" href="#"></a></li>
-                    <li class="hero__linkSocialItem"><a class="fab fa-whatsapp" href="#"></a></li>
-                    <li class="hero__linkSocialItem"><a class="fab fa-instagram" href="#"></a></li>
-                    <li class="hero__linkSocialItem"><a class="fab fa-linkedin" href="#"></a></li>
-                    <li class="hero__linkSocialItem"><a class="fab fa-discord" href="#"></a></li>
-                    <li class="hero__linkSocialItem"><a class="fab fa-twitter" href="#"></a></li>
-            </ul>
-            <a class="hero__scroll fas fa-long-arrow-alt-down" href="#identity"></a>
-        </div>
-    </header>
+    <div class="bg-warning p-2 " id="members">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Your Name</th>
+                <th>Your Tier</th>
+                <th>Your Amount</th>
+                <th>Your Interest</th>
+                <th>Your Weekly returns</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="userName"></td>
+                <td id="userTier" ></td>
+                <td id="userAmount"></td>
+                <td id="userInterest"></td>
+                <td id="userReturns"></td>
+              </tr>
+            </tbody>
+          </table>
+<br>
+<br>
+<br>
 
-    <section id="identity" class="identity">
-        <div class="identity__header">WHO ARE WE</div>
-        <hr class="identity__divider">
-        <div class="identity__introText">
-            Norstack is a design and branding agency with partners worldwide. We design thoughtful digital experiences and beautiful brand aesthetics.
-        </div>
-        <div class="identity__subText">
-            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
-        </div>
-    </section>
-
-    <section class="process">
-        <div class="overlay"></div>
-        <div class="process__header">OUR SERVICES</div>
-        <hr class="process__divider">
-        <div class="process__line">
-            <div class="process__box">
-                <div class="process__boxHeader">
-                    <span class="process__boxHeaderIcon fa fa-code"></span>
-                    <p class="process__boxHeaderHeading">Web Design and Development</p>
-                </div>
-                <p class="process__boxBody">
-                    Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. Quis dolores totam voluptatibus molestiae non. Quae exercitationem cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-            <div class="process__box">
-                <div class="process__boxHeader">
-                    <span class="process__boxHeaderIcon fa fa-link"></span>
-                    <p class="process__boxHeaderHeading">Blockchain Development</p>
-                </div>
-                <p class="process__boxBody">
-                    Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. Quis dolores totam voluptatibus molestiae non. Quae exercitationem cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-        </div>
-
-        <div class="process__line">
-            <div class="process__box">
-                <div class="process__boxHeader">
-                    <span class="process__boxHeaderIcon fa fa-laptop"></span>
-                    <p class="process__boxHeaderHeading">Computer Sales and Maintenance</p>
-                </div>
-                <p class="process__boxBody">
-                    Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. Quis dolores totam voluptatibus molestiae non. Quae exercitationem cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-            <div class="process__box">
-                <div class="process__boxHeader">
-                    <span class="process__boxHeaderIcon fa fa-globe"></span>
-                    <p class="process__boxHeaderHeading">Networking</p>
-                </div>
-                <p class="process__boxBody">
-                    Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. Quis dolores totam voluptatibus molestiae non. Quae exercitationem cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects">
-        <div class="projects__heading">
-            <div class="identity__header">FEATURED PROJECTS</div>
-            <hr class="identity__divider">
-            <div class="identity__subText">
-                Norstack is a design and branding agency with partners worldwide. We design thoughtful digital experiences and beautiful brand aesthetics.
-            </div>
-        </div>
-
-        <div class="projects__body">
-            <div class="projects__box projects__box1">
-                <img class="projects__boxItem" src="images/breezy.jpg">
-                <div class="projects__overlay"></div>
-                <div datasrc=0 class="projects__link projectCarousel__open">
-                    <div class="projects__linkHeader">
-                        <div>
-                            <h6 class="projects__linkHeaderText">BRANDING</h6>
-                            <h1 class="projects__linkHeaderText">Chris Brown</h1>
-                            <a href="#" class="projects__description" hidden>The official website of RnB/HipHop singer Chris Murray Brown</a>
-                        </div>
-                        <div>
-                            <a class="projects__linkHeaderIcon">
-                                <span class="fa fa-link"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="projects__linkBody">...</div>
-                </div>
-            </div>
-
-            <div class="projects__box projects__box2">
-                <img class="projects__boxItem" src="images/mongo.jpg">
-                <div class="projects__overlay"></div>
-                <div datasrc=1 class="projects__link projectCarousel__open">
-                    <div class="projects__linkHeader">
-                        <div>
-                            <h6 class="projects__linkHeaderText">SECURITY</h6>
-                            <h1 class="projects__linkHeaderText">Hacking The kremlin</h1>
-                            <a href="#" class="projects__description" hidden>How an imminent attack on the US by the Russians was prevented.</a>
-                        </div>
-                        <div>
-                            <a class="projects__linkHeaderIcon">
-                                <span class="fa fa-link"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="projects__linkBody">...</div>
-                </div>
-            </div>
-
-            <div class="projects__box projects__box3">
-                <img class="projects__boxItem" src="images/bridge.jpg">
-                <div class="projects__overlay"></div>
-                <div datasrc=2 class="projects__link projectCarousel__open">
-                    <div class="projects__linkHeader">
-                        <div>
-                            <h6 class="projects__linkHeaderText">ARCHITECTURE</h6>
-                            <h1 class="projects__linkHeaderText">The Bridge</h1>
-                            <a href="#" class="projects__description" hidden>The construction of a multi-lane traffic decongesting highway.</a>
-                        </div>
-                        <div>
-                            <a class="projects__linkHeaderIcon">
-                                <span class="fa fa-link"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="projects__linkBody">...</div>
-                </div>
-            </div>
-
-            <div class="projects__box projects__box4">
-                <img class="projects__boxItem" src="images/mars.jpg">
-                <div class="projects__overlay"></div>
-                <div datasrc=3 class="projects__link projectCarousel__open">
-                    <div class="projects__linkHeader">
-                        <div>
-                            <h6 class="projects__linkHeaderText">SPACE</h6>
-                            <h1 class="projects__linkHeaderText">A Trip To Mars</h1>
-                            <a href="#" class="projects__description" hidden>The secret behind the success of the Elon Musk's Falcon 9.</a>
-                        </div>
-                        <div>
-                            <a class="projects__linkHeaderIcon">
-                                <span class="fa fa-link"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="projects__linkBody">...</div>
-                </div>
-            </div>
-
-            <div class="projects__box projects__box5">
-                <img class="projects__boxItem" src="images/django.jpg">
-                <div class="projects__overlay"></div>
-                <div datasrc=4 class="projects__link projectCarousel__open">
-                    <div class="projects__linkHeader">
-                        <div>
-                            <h6 class="projects__linkHeaderText">WEB DEVELOPMENT</h6>
-                            <h1 class="projects__linkHeaderText">Swap</h1>
-                            <a href="#" class="projects__description" hidden>Discovering the Art of writing codes.</a>
-                        </div>
-                        <div>
-                            <a class="projects__linkHeaderIcon">
-                                <span class="fa fa-link"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="projects__linkBody">...</div>
-                </div>
-            </div>
-
-            <div class="projects__box projects__box6">
-                <img class="projects__boxItem" src="images/interior.jpg">
-                <div class="projects__overlay"></div>
-                <div datasrc=5 class="projects__link projectCarousel__open">
-                    <div class="projects__linkHeader">
-                        <div>
-                            <h6 class="projects__linkHeaderText">DESIGN</h6>
-                            <h1 class="projects__linkHeaderText">The Interior</h1>
-                            <a href="#" class="projects__description" hidden>A decor to reflect on for decades.</a>
-                        </div>
-                        <div>
-                            <a class="projects__linkHeaderIcon">
-                                <span class="fa fa-link"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="projects__linkBody">...</div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="projectCarousel">
-
-        <div id="progress">
-          <div id="progressBar"></div>
-        </div>
-
-        <div class="projectCarousel__header">
-            <div class="projectCarousel__projectNumber">0 / 0</div>
-            <ul class="projectCarousel__toolbar">
-<!--                <li><i class="material-icons projectCarousel__toolbarCopy">content_copy</i> </li>-->
-                <li><i class="material-icons projectCarousel__toolbarZoomIn">zoom_in</i></li>
-                <li><i class="material-icons projectCarousel__toolbarZoomOut">zoom_out</i></li>
-                <li><i class="material-icons projectCarousel__toolbarFullscreen">fullscreen</i></li>
-                <li><i class="material-icons projectCarousel__toolbarPlay">play_circle_outline</i></li>
-                <li><i class="material-icons projectCarousel__toolbarPause" style="display: none">pause_circle_outline</i></li>
-                <li><i class="material-icons projectCarousel__toolbarDownload">download</i></li>
-                <li><i class="material-icons projectCarousel__close">close</i></li>
-            </ul>
-        </div>
-
-        <div class="projectCarousel__leftArrow">
-            <div class="overlay"></div>
-            <span class="fas fa-arrow-left"></span>
-        </div>
-        <div class="projectCarousel__rightArrow">
-            <div class="overlay"></div>
-            <span class="fas fa-arrow-right"></span>
-        </div>
-
-        <div class="projectCarousel__footer">
-            <div class="projectCarousel__footerDetails">
-                <div class="overlay"></div>
-                <p class="projectCarousel__footerDetailsHeader"></p>
-                <p class="projectCarousel__footerDetailsBody"></p>
-                <a class="projectCarousel__footerDetailsLink">Details</a>
-            </div>
-            <div class="projectCarousel__footerMenu">
-                <div class="projectCarousel__footerMenuBoxToggle">
-                    <i class="material-icons">grid_on</i>
-                </div>
-                <div datasrc="" class="projectCarousel__footerMenuBox" style="display: none">
-                    <img class="projectCarousel__footerMenuBoxImage" src="">
-                </div>
-            </div>
-        </div>
-
-        <div class="projectCarousel__imageBox" style="display: none">
-            <img class="projectCarousel__image" src="">
-        </div>
-    </section>
-
-    <section class="stats">
-        <div class="stats__box">
-            <span class="stats__boxIcon fa fa-project-diagram"></span>
-            <hr class="stats__boxDivider">
-            <div class="stats__boxNumber">110</div>
-            <div class="stats__boxText">AWESOME<br>PROJECTS</div>
-        </div>
-        <div class="stats__box">
-            <span class="stats__boxIcon fa fa-user"></span>
-            <hr class="stats__boxDivider">
-            <div class="stats__boxNumber">9050</div>
-            <div class="stats__boxText">CLIENTS<br>SERVED</div>
-        </div>
-        <div class="stats__box">
-            <span class="stats__boxIcon fa fa-award"></span>
-            <hr class="stats__boxDivider">
-            <div class="stats__boxNumber">210</div>
-            <div class="stats__boxText">AWARDS<br>RECEIVED</div>
-        </div>
-        <div class="stats__box">
-            <span class="stats__boxIcon fa fa-bomb"></span>
-            <hr class="stats__boxDivider">
-            <div class="stats__boxNumber">123</div>
-            <div class="stats__boxText">CRAZY<br>IDEAS</div>
-        </div>
-        <div class="stats__box">
-            <span class="stats__boxIcon fa fa-coffee"></span>
-            <hr class="stats__boxDivider">
-            <div class="stats__boxNumber">1500</div>
-            <div class="stats__boxText">COFFEE CUPS</div>
-        </div>
-        <div class="stats__box">
-            <span class="stats__boxIcon fas fa-hourglass-half"></span>
-            <hr class="stats__boxDivider">
-            <div class="stats__boxNumber">7200</div>
-            <div class="stats__boxText">HOURS</div>
-        </div>
-    </section>
-
-    <section class="team">
-        <div class="identity__header">OUR TEAM</div>
-        <hr class="identity__divider">
-
-        <div class="team__box">
-            <div class="team__card">
-                <div class="team__cardHeader">
-                    <div class="team__cardName">ABASSYORNOR EDEM</div>
-                    <div class="team__cardPosition">Fullstack Developer</div>
-                </div>
-                <div class="team__cardImageBox">
-                    <img class="team__cardImage" src="images/abbey.jpg">
-                </div>
-                <div class="team__cardSocialMedia">
-                    <span class="team__cardSocialMediaFacebook"><a href="#" class="fab fa-facebook-square"></a></span>
-                    <span class="team__cardSocialMediaLinkedIn"><a href="#" class="fab fa-linkedin-in"></a></span>
-                    <span class="team__cardSocialMediaTwitter"><a href="#" class="fab fa-twitter"></a></span>
-                    <span class="team__cardSocialMediaInstagram"><a href="#" class="fab fa-instagram"></a></span>
-                </div>
-            </div>
-
-            <div class="team__card">
-                <div class="team__cardHeader">
-                    <div class="team__cardName">ALLISON RAY</div>
-                    <div class="team__cardPosition">UI/UX Designer</div>
-                </div>
-                <div class="team__cardImageBox">
-                    <img class="team__cardImage" src="images/allison.jpg">
-                </div>
-                <div class="team__cardSocialMedia">
-                    <span class="team__cardSocialMediaFacebook"><a href="#" class="fab fa-facebook-square"></a></span>
-                    <span class="team__cardSocialMediaLinkedIn"><a href="#" class="fab fa-linkedin-in"></a></span>
-                    <span class="team__cardSocialMediaTwitter"><a href="#" class="fab fa-twitter"></a></span>
-                    <span class="team__cardSocialMediaInstagram"><a href="#" class="fab fa-instagram"></a></span>
-                </div>
-            </div>
-
-            <div class="team__card">
-                <div class="team__cardHeader">
-                    <div class="team__cardName">Jack Alfred</div>
-                    <div class="team__cardPosition">Graphics Designer</div>
-                </div>
-                <div class="team__cardImageBox">
-                    <img class="team__cardImage" src="images/jack.jpg">
-                </div>
-                <div class="team__cardSocialMedia">
-                    <span class="team__cardSocialMediaFacebook"><a href="#" class="fab fa-facebook-square"></a></span>
-                    <span class="team__cardSocialMediaLinkedIn"><a href="#" class="fab fa-linkedin-in"></a></span>
-                    <span class="team__cardSocialMediaTwitter"><a href="#" class="fab fa-twitter"></a></span>
-                    <span class="team__cardSocialMediaInstagram"><a href="#" class="fab fa-instagram"></a></span>
-                </div>
-            </div>
-
-            <div class="team__card">
-                <div class="team__cardHeader">
-                    <div class="team__cardName">STEPHANY SMITH</div>
-                    <div class="team__cardPosition">Content Creator</div>
-                </div>
-                <div class="team__cardImageBox">
-                    <img class="team__cardImage" src="images/stephany.jpg">
-                </div>
-                <div class="team__cardSocialMedia">
-                    <span class="team__cardSocialMediaFacebook"><a href="#" class="fab fa-facebook-square"></a></span>
-                    <span class="team__cardSocialMediaLinkedIn"><a href="#" class="fab fa-linkedin-in"></a></span>
-                    <span class="team__cardSocialMediaTwitter"><a href="#" class="fab fa-twitter"></a></span>
-                    <span class="team__cardSocialMediaInstagram"><a href="#" class="fab fa-instagram"></a></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="testimonials__heading">
-            <div class="identity__header">CUSTOMER REVIEWS</div>
-            <hr class="identity__divider">
-        </div>
-        <div class="testimonials__body">
-            "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what
-            you believe is great work. And the only way to do great work is to love what you do. If you haven't found it
-            yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it."
-        </div>
-        <div class="testimonials__card">
-            <div class="testimonials__cardImageBox">
-                <img src="images/jack.jpg">
-            </div>
-            <div class="testimonials__cardBody">Steve Jobs</div>
-            <div class="testimonials__cardFooter">CEO, Apple.</div>
-        </div>
-    </section>
-
-    <section class="clients">
-        <span class="clients__icon fab fa-apple"></span>
-        <span class="clients__icon fab fa-google"></span>
-        <span class="clients__icon fab fa-microsoft"></span>
-        <span class="clients__icon fab fa-amazon"></span>
-        <span class="clients__icon fab fa-digital-ocean"></span>
-        <span class="clients__icon fab fa-ebay"></span>
-    </section>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Members</th>
+                <th>Tier</th>
+                <th>Amount</th>
+                <th>Interest</th>
+                <th>Weekly returns</th>
+              </tr>
+            </thead>
+            <tbody id="otherMembers">
+            </tbody>
+          </table>
+    </div>
+</div>
 </body>
-
-<footer class="footer">
-    <div class="footerLinks">
-        <div class="contactAndPolicy">
-            <ul class="contact">
-                <li class="contact__header">CONTACT</li>
-                <li class="contact__items">22 Prince Ogele, Shalom Estate, River State, NG</li>
-                <li class="contact__items">info@norstack.com</li>
-                <li class="contact__items">(+234) 708 079 5366</li>
-            </ul>
-
-            <ul class="policies">
-                <li class="policies__header">POLICIES</li>
-                <li class="policies__items">Terms and Conditions</li>
-                <li class="policies__items">Privacy</li>
-            </ul>
-        </div>
-
-        <div class="newsletter">
-            <form>
-                <input name="email" type="email">
-                <button>Subscribe</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="socialmedia">
-        <span>Icon</span>
-        <span>Icon</span>
-        <span>Icon</span>
-    </div>
-
-    <div class="copyright"></div>
-</footer>
 </html>
