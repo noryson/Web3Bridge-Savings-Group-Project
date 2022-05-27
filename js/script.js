@@ -43,30 +43,22 @@ $(document).ready(function(){
                 $("#userName")[0].innerHTML = name;
                 $("#userTier")[0].innerHTML = tier1.name;
                 $("#userAmount")[0].innerHTML = tier1.amount;
-                $("#userInterest")[0].innerHTML = tier1.amount;
+                $("#userInterest")[0].innerHTML = tier1.interest;
                 $("#userReturns")[0].innerHTML = parseInt(tier1.interest) /100 * parseInt(tier1.amount);
 
-                $("#otherMembers").empty();
-                var total = 0;
-                for(let member of tier1.members){
-                    $("#otherMembers").append(`
-                      <tr>
-                        <td >${member}</td>
-                        <td >${tier1.name}</td>
-                        <td >${tier1.amount}</td>
-                        <td>${tier1.interest}</td>
-                        <td >${$("#userReturns")[0].innerHTML}</td>
-                      </tr>
-                    `);
-                    total += 10000;
-                }
+                var total = parseInt($("#balance")[0].innerHTML);
+                $("#otherMembers").append(`
+                  <tr>
+                    <td >${name}</td>
+                    <td >${tier1.name}</td>
+                    <td >${tier1.amount}</td>
+                    <td>${tier1.interest}</td>
+                    <td >${$("#userReturns")[0].innerHTML}</td>
+                  </tr>
+                `);
+                total += 10000;
 
-                    $("#otherMembers").append(`
-                      <tr>
-                        <td>TOTAL</td>
-                        <td >${total}</td>
-                      </tr>
-                    `)
+                $("#balance")[0].innerHTML = total
                 break;
             case "2":
                 if(amount != 20000){
@@ -77,30 +69,22 @@ $(document).ready(function(){
                 $("#userName")[0].innerHTML = name;
                 $("#userTier")[0].innerHTML = tier2.name;
                 $("#userAmount")[0].innerHTML = tier2.amount;
-                $("#userInterest")[0].innerHTML = tier2.amount;
+                $("#userInterest")[0].innerHTML = tier2.interest;
                 $("#userReturns")[0].innerHTML = parseInt(tier2.interest) /100 * parseInt(tier2.amount);
 
-                $("#otherMembers").empty();
-                var total = 0;
-                for(let member of tier2.members){
-                    $("#otherMembers").append(`
-                      <tr>
-                        <td >${member}</td>
-                        <td >${tier2.name}</td>
-                        <td >${tier2.amount}</td>
-                        <td>${tier2.interest}</td>
-                        <td >${$("#userReturns")[0].innerHTML}</td>
-                      </tr>
-                    `);
-                    total += 10000;
-                }
+                var total = parseInt($("#balance")[0].innerHTML);
+                $("#otherMembers").append(`
+                  <tr>
+                    <td >${name}</td>
+                    <td >${tier2.name}</td>
+                    <td >${tier2.amount}</td>
+                    <td>${tier2.interest}</td>
+                    <td >${$("#userReturns")[0].innerHTML}</td>
+                  </tr>
+                `);
+                total += 20000;
 
-                    $("#otherMembers").append(`
-                      <tr>
-                        <td>TOTAL</td>
-                        <td >${total}</td>
-                      </tr>
-                    `)
+                $("#balance")[0].innerHTML = total
                 break;
             case "3":
                 if(amount != 30000){
@@ -111,30 +95,22 @@ $(document).ready(function(){
                 $("#userName")[0].innerHTML = name;
                 $("#userTier")[0].innerHTML = tier3.name;
                 $("#userAmount")[0].innerHTML = tier3.amount;
-                $("#userInterest")[0].innerHTML = tier3.amount;
+                $("#userInterest")[0].innerHTML = tier3.interest;
                 $("#userReturns")[0].innerHTML = parseInt(tier3.interest) /100 * parseInt(tier3.amount);
 
-                $("#otherMembers").empty();
-                var total = 0;
-                for(let member of tier3.members){
-                    $("#otherMembers").append(`
-                      <tr>
-                        <td >${member}</td>
-                        <td >${tier3.name}</td>
-                        <td >${tier3.amount}</td>
-                        <td>${tier3.interest}</td>
-                        <td >${$("#userReturns")[0].innerHTML}</td>
-                      </tr>
-                    `);
-                    total += 10000;
-                }
+                var total = parseInt($("#balance")[0].innerHTML);
+                $("#otherMembers").append(`
+                  <tr>
+                    <td >${name}</td>
+                    <td >${tier3.name}</td>
+                    <td >${tier3.amount}</td>
+                    <td>${tier3.interest}</td>
+                    <td >${$("#userReturns")[0].innerHTML}</td>
+                  </tr>
+                `);
+                total += 30000;
 
-                    $("#otherMembers").append(`
-                      <tr>
-                        <td>TOTAL</td>
-                        <td >${total}</td>
-                      </tr>
-                    `)
+                $("#balance")[0].innerHTML = total
                 break;
             default:
                 alert("Wrong input");
